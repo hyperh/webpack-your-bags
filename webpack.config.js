@@ -1,3 +1,5 @@
+var webpack = require('webpack');
+
 module.exports = {
   entry:  './src',
   output: {
@@ -5,6 +7,13 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: 'builds/'
   },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'main',
+      children: true,
+      minChunks: 2,
+    }),
+  ],
   module: {
     loaders: [
       {
