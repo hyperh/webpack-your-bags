@@ -8,3 +8,11 @@ if (document.querySelectorAll('a').length) {
     button.render('a');   
   });
 }
+
+if (document.querySelectorAll('h1').length) {
+  require.ensure([], () => {
+    const Header = require('./Components/Header').default;
+
+     new Header().render('h1');
+  });
+}
