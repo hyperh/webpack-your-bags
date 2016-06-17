@@ -52,6 +52,12 @@ module.exports = {
   // },  
   plugins: plugins,
   module: {
+    preLoaders: [
+      {
+        test: /\.js/,
+        loader: 'eslint',
+      }
+    ],    
     loaders: [
       {
         test: /\.js/,
