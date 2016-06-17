@@ -1,3 +1,5 @@
+import './styles.scss';
+
 import $ from 'jquery';
 
 if (document.querySelectorAll('a').length) {
